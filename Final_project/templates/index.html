@@ -1,0 +1,26 @@
+{% extends "./layout/base.html" %}
+
+{% block content %}
+
+    <div class="jumbotron">
+      <p class="lead">Welcome to User Name check</p>
+      <p class="lead">Let's see if your User Name is secure</p>
+      <p class="lead">Fill out the form below with a User Name that has these restraits</p>
+      <ul>
+          <li>
+              <p>Must have a upper case letter somewhere.</p>
+          </li>
+          <li>
+              <p>Must have a lower case letter somewhere.</p>
+          </li>
+          <li>
+              <p>Must have a number at the end.</p>
+          </li>
+      </ul>
+      <form action="/report" method="get">
+          <label for="username">UserName</label>
+          <input type="string" id="username" name="USERNAME" >
+          <input type="submit" value="Submit Form" >
+      </form>
+    </div>
+{% endblock %}
